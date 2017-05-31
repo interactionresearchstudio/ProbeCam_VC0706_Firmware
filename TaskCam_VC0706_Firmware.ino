@@ -220,6 +220,12 @@ void takePicture(int q) {
 
   //disableCamera();
 
+  cam_reset();
+  delay(2000);
+  char *reply = cam_getVersion();
+  delay(500);
+  cam_setImageSize(VC0706_640x480);
+
   arduino.println("R");
 }
 
